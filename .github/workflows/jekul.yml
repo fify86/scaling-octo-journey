@@ -1,0 +1,10 @@
+name: jekul 
+job:
+build:
+branches: [ "main" ]
+
+permission: dispatch  
+       run on: ubuntu-latest
+     steps:
+             name: dotnet
+              run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json
