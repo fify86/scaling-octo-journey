@@ -1,7 +1,7 @@
 name: jekul 
 job:
 push:
-    branches: [ "main" ]
+ branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
