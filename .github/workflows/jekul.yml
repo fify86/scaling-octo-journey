@@ -1,4 +1,4 @@
-name: jekul 
+name: CI
 
 on:
   push:
