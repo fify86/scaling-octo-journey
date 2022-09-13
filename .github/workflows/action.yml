@@ -26,6 +26,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+job:
+deploy:
     runs-on: macos-latest
     steps:
       - name: Checkout
