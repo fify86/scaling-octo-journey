@@ -19,6 +19,9 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  metadata: read
+
+ workflows_dispatch
 
 # Allow one concurrent deployment
 concurrency:
@@ -28,10 +31,10 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: Setup Ruby
         uses: ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
