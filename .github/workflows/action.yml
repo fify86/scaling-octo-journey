@@ -19,9 +19,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  metadata: read
-
- workflows_dispatch
 
 # Allow one concurrent deployment
 concurrency:
@@ -31,15 +28,15 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Ruby
-        uses: ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
-          ruby-version: '2.0' # Not needed with a .ruby-version file
-          bundler-cache: false # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         id: pages
@@ -58,7 +55,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
