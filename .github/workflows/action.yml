@@ -27,7 +27,7 @@ concurrency:
   cancel-in-progress: false
 
 job:
-build: false
+build: 
     runs-on: macos-latest
     steps:
       - name: Checkout
