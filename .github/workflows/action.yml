@@ -1,6 +1,0 @@
-
-- name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
