@@ -1,7 +1,6 @@
 name: Jekyll CI
 
-on:
-# Job 
+job:
   push:
  branches: [ "main" ]
   pull_request:
