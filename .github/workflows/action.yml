@@ -26,8 +26,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-workflows_dispatch
-
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
