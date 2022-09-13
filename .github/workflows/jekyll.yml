@@ -59,7 +59,7 @@ jobs:
     needs: build
     steps:
          - name: GCM
-            run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json
+            run: dotnet nuget add source --username fify86 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
 
       - name: Deploy to GitHub Pages
         id: deployment
